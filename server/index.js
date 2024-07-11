@@ -35,15 +35,19 @@ app.use("/transaction", transactionRoutes);
 
 
 // MongoDB setup
-const PORT = process.env.PORT || 9000;
+const PORT = 1337 || 9000;
+
 mongoose
   .connect(process.env.MONGO_URL)
+//   console.log('')
   .then(async () => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
 
-    /* ADD DATA ONE TIME ONLY OR AS NEEDED */
+    // Add data one time only or as needed:CAUTION
     // await mongoose.connection.db.dropDatabase();
     // KPI.insertMany(kpis);
+
+    
     // Product.insertMany(products);
     // Transaction.insertMany(transactions);
   })
