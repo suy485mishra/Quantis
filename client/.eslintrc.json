@@ -1,0 +1,6 @@
+{
+    "extends":"react-app"
+}
+
+//it gives basic default for eslint
+//it gives more warnings and heps with efficiency
