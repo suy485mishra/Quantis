@@ -18,7 +18,7 @@ const daySchema = new Schema(
       get: (v) => v / 100,
     },
   },
-    //for using get properties this toJSON is needed
+    //for using get properties this toJSON is need
   { toJSON: { getters: true } }
 );
 
