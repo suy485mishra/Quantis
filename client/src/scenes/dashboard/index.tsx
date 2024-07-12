@@ -8,7 +8,7 @@ const gridTemplateLargeScreens = `
   "a b c"
   "a b c"
   "a b c"
-  "a b f"
+  "d b f"
   "d e f"
   "d e f"
   "d h i"
@@ -16,6 +16,7 @@ const gridTemplateLargeScreens = `
   "g h j"
   "g h j"
 `;
+
 const gridTemplateSmallScreens = `
   "a"
   "a"
@@ -51,13 +52,14 @@ const gridTemplateSmallScreens = `
 
 const Dashboard = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1200px)");
+
   return (
     <Box
       width="100%"
-      height="100%"
+      height="100vh"
       display="grid"
       gap="1.5rem"
-    
+      
       sx={
         isAboveMediumScreens
           ? {

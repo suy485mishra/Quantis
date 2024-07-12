@@ -10,6 +10,7 @@ import Predictions from "@/scenes/predictions";
 
 function App() {
   const theme = useMemo(() => createTheme(themeSettings), []);
+
   return (
     <div className="app">
       <BrowserRouter>
@@ -17,7 +18,7 @@ function App() {
           <CssBaseline />
           <Box width="100%" height="100%" padding="1rem 2rem 4rem 2rem">
             <Navbar />
-            <br/>
+ 
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/predictions" element={<Predictions />} />

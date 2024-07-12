@@ -1,58 +1,86 @@
-import React from 'react'
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import EqualizerRoundedIcon from '@mui/icons-material/EqualizerRounded';
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, Typography, useTheme, IconButton } from '@mui/material';
 import FlexBetween from '@/components/FlexBetween';
 
-type Props = {}
+type Props = {};
 
 const Navbar = (props: Props) => {
   const { palette } = useTheme();
-  const [selected, setSelected] = useState("dashboard");
+  const [selected, setSelected] = useState('dashboard');
 
   return (
-   <FlexBetween mb='0.5rem 0rem' color={palette.grey[300]} >
-    {/* Left part */}
-       
-       <FlexBetween gap="0.75rem">
-        <EqualizerRoundedIcon sx={{ fontSize: "28px" }} />
-        <Typography variant="h4" fontSize="16px">
+    <FlexBetween 
+      mb='0.5rem'
+      p='0.5rem 2rem'
+      color={palette.grey[300]}
+      sx={{
+        // borderBottom: `1px solid ${palette.grey[700]}`,
+        backgroundColor: palette.background.default,
+      }}
+    >
+      {/* Left part */}
+      <FlexBetween gap="0.75rem">
+        <IconButton sx={{ p: 0 }}>
+          <EqualizerRoundedIcon sx={{ fontSize: '28px', color: palette.primary.main }} />
+        </IconButton>
+        <Typography variant="h4" fontSize="16px" fontWeight="bold">
           Quantis
         </Typography>
       </FlexBetween>
 
-
-      {/* //right part */}
-
+      {/* Right part */}
       <FlexBetween gap="2rem">
-        <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
-          <Link
-            to="/"
-            onClick={() => setSelected("dashboard")}
-            style={{
-              color: selected === "dashboard" ? "inherit" : palette.grey[700],
-              textDecoration: "inherit",
+        <Link
+          to="/"
+          onClick={() => setSelected('dashboard')}
+          style={{
+            textDecoration: 'none',
+          }}
+        >
+          <Box 
+            sx={{
+              padding: '0.5rem 1rem',
+              borderRadius: '4px',
+              color: selected === 'dashboard' ? palette.primary.main : palette.grey[700],
+              fontWeight: selected === 'dashboard' ? 'bold' : 'normal',
+              '&:hover': {
+                color: palette.primary.light,
+                backgroundColor: palette.grey[200], // Use a soft background color
+              },
             }}
+            aria-current={selected === 'dashboard' ? 'page' : undefined}
           >
             Dashboard
-          </Link>
-        </Box>
-        <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
-          <Link
-            to="/predictions"
-            onClick={() => setSelected("predictions")}
-            style={{
-              color: selected === "predictions" ? "inherit" : palette.grey[700],
-              textDecoration: "inherit",
+          </Box>
+        </Link>
+        <Link
+          to="/predictions"
+          onClick={() => setSelected('predictions')}
+          style={{
+            textDecoration: 'none',
+          }}
+        >
+          <Box 
+            sx={{
+              padding: '0.5rem 1rem',
+              borderRadius: '4px',
+              color: selected === 'predictions' ? palette.primary.main : palette.grey[700],
+              fontWeight: selected === 'predictions' ? 'bold' : 'normal',
+              '&:hover': {
+                color: palette.primary.light,
+                backgroundColor: palette.grey[200], // Use a soft background color
+              },
             }}
+            aria-current={selected === 'predictions' ? 'page' : undefined}
           >
             Predictions
-          </Link>
-        </Box>
+          </Box>
+        </Link>
       </FlexBetween>
-   </FlexBetween>
-  )
-}
+    </FlexBetween>
+  );
+};
 
-export default Navbar
+export default Navbar;

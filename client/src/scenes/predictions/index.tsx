@@ -21,6 +21,8 @@ const Predictions = () => {
   const [isPredictions, setIsPredictions] = useState(false);
   const { data: kpiData } = useGetKpisQuery();
 
+
+  //formatting data w.r.rt to regression library in npm
   const formattedData = useMemo(() => {
     if (!kpiData) return [];
     const monthData = kpiData[0].monthlyData;
@@ -30,6 +32,9 @@ const Predictions = () => {
         return [i, revenue];
       }
     );
+
+
+    //
     const regressionLine = regression.linear(formatted);
 
     return monthData.map(({ month, revenue }, i: number) => {

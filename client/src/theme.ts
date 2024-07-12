@@ -13,32 +13,36 @@ export const tokens = {
       900: "#242427",
     },
     primary: {
-      // light green
-      100: "#d0fcf4",
-      200: "#a0f9e9",
-      300: "#71f5de",
-      400: "#41f2d3",
-      500: "#12efc8",
-      600: "#0ebfa0",
-      700: "#0b8f78",
-      800: "#076050",
-      900: "#043028",
+      // shades of blue
+      100: "#e3f2fd", // very light blue
+      200: "#bbdefb", // light blue
+      300: "#90caf9", // light-medium blue
+      400: "#64b5f6", // medium blue
+      500: "#42a5f5", // blue
+      600: "#2196f3", // medium-dark blue
+      700: "#1e88e5", // dark blue
+      800: "#1976d2", // very dark blue
+      900: "#0d47a1", // almost black blue
     },
     secondary: {
-      // yellow
-      100: "#fcf0dd",
-      200: "#fae1bb",
-      300: "#f7d299",
-      400: "#f5c377",
-      500: "#f2b455",
-      600: "#c29044",
-      700: "#916c33",
-      800: "#614822",
-      900: "#302411",
-    },
+      100: "#e8f5e9",
+      200: "#c8e6c9",
+      300: "#a5d6a7",
+      400: "#81c784",
+      500: "#66bb6a",
+      600: "#4caf50",
+      700: "#43a047",
+      800: "#388e3c",
+      900: "#2c6b2f",
+    }
+,    
+    
+    
+    
+    
     tertiary: {
       // purple
-      500: "#8884d8",
+      500: "#ff8d19",
     },
     background: {
       light: "#2d2d34",
