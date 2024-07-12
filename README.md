@@ -4,30 +4,34 @@ A Finance Dashboard with that displays all important stats about the revenue and
 
 
 
-## Table of Contents
-
-- [Tech Stack](#Techstack)
-Front-End:
-
-React
-Material-UI
-TypeScript
-
-Back-End:
-
-Node.js
-Express
-
-Database:
-
-MongoDB
-
-Additional Technologies:
-
-Machine Learning libraries/frameworks
 
 
-- [Deployment](#deployment)
+## Tech Stack
 
-Deployed on Render Link: [text](https://quantis-fe.onrender.com/)
+Our project uses a modern and efficient tech stack to ensure scalability, maintainability, and ease of development:
+
+### Front-End
+
+- **React**:  
+- **Material-UI**
+- **TypeScript**
+
+### Back-End
+
+- **Node.js**
+- **Express**
+
+### Database
+
+- **MongoDB** 
+
+### Additional Technologies
+
+- **Machine Learning**
+
+
+
+## Deployment
+
+### Deployed on Render Link: [Link](https://quantis-fe.onrender.com/)
 
