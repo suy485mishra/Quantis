@@ -1,1 +1,0 @@
-import { useGetKpisQuery } from "./api";

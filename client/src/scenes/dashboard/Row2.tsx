@@ -45,7 +45,7 @@ const Row2 = () => {
       )
     );
   }, [operationalData]);
-  const str="ab";
+
   const productExpenseData = useMemo(() => {
     return (
       productData &&
@@ -135,7 +135,7 @@ const Row2 = () => {
             >
             
               {
-              pieData.map((entry,index) => (
+              pieData.map((_,index) => (
                 <Cell key={`cell-${index}`} fill={pieColors[index]} />
              ))            }
             </Pie>
