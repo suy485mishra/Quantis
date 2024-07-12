@@ -48,7 +48,7 @@ import {
 } from "./types";
 
 export const api = createApi({
-  baseQuery: fetchBaseQuery({ baseUrl: import.meta.env.VITE_BASE_URL }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:1337' }),
   reducerPath: "main",
   //tagtypes is saving info that we get from getKpis,getproducts etc apis
   tagTypes: ["Kpis", "Products", "Transactions"],

@@ -25,11 +25,7 @@ app.use(morgan("common"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(
-	cors({
-		origin: [""],
-		methods: ["POST", "GET", "DELETE"],
-		credentials: true,
-	})
+	cors()
 );
 
 console.log('Environment variables loaded:');

@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import EqualizerRoundedIcon from '@mui/icons-material/EqualizerRounded';
 import { Box, Typography, useTheme, IconButton } from '@mui/material';
 import FlexBetween from '@/components/FlexBetween';
 
-type Props = {};
 
-const Navbar = (props: Props) => {
+
+const Navbar = () => {
   const { palette } = useTheme();
   const [selected, setSelected] = useState('dashboard');
 
