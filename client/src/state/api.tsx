@@ -48,7 +48,7 @@ import {
 } from "./types";
 
 export const api = createApi({
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:1337' }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://quantis.onrender.com' }),
   reducerPath: "main",
   //tagtypes is saving info that we get from getKpis,getproducts etc apis
   tagTypes: ["Kpis", "Products", "Transactions"],
